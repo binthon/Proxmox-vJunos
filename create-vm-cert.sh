@@ -57,7 +57,7 @@ VMID=""
 VMNAME=""
 IP_ADDR=""
 BRIDGES_LIST=""
-GE003_IP3=""
+GE003_IP=""
 GE000_IP=""
 GE001_IP=""
 GE002_IP=""
@@ -252,8 +252,6 @@ EOF_V3
 
 fi # End of gRPC enable check
 
-
-CERT_ID="${VMNAME}-cert"
 
 # --- 7d. Generate juniper.conf (conditionally adding gRPC config) ---
 echo "--> Generating juniper.conf file..."
