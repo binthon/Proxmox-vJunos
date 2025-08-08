@@ -57,7 +57,7 @@ ROOT_PASSWORD_HASH=""
 # --- File Paths ---
 
 # Path to the vJunos-switch qcow2 image.
-SWITCH_QCOW2_PATH="/root/download/vJunos-switch-25.2R1.9.qcow2"
+SWITCH_QCOW2_PATH="/root/download/vJunos-switch-24.4R1.9.qcow2"
 
 # Path to the vJunos-router qcow2 image.
 ROUTER_QCOW2_PATH="/root/download/vJunos-router-25.2R1.9.qcow2"
