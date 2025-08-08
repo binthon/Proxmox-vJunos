@@ -88,5 +88,8 @@ Other options:
   --ge002-ip 192.168.30.175 \
   --ge003-ip 192.168.1.175
 ```
-### Notificaion
+### Comments
+1. In SNMPv3 script uses MD5 and DES, better use SHA/AES.
+2. The command to generate a certificate after trigger-after-boot does not work correctly, a better event should be found.
+
 
