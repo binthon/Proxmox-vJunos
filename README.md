@@ -1,6 +1,6 @@
 # Proxmox-vJunos
 
-## The project automates the process of creating virtual machines from Juniper vJunos qcow disk in the Promxox VE environment. The script generate the juniper.conf with super-user, password, snmp and gNMI. Additionally attach disks, network interfaces and set ip addresses.
+### The project automates the process of creating virtual machines from Juniper vJunos qcow disk in the Promxox VE environment. The script generate the juniper.conf with super-user, password, snmp and gNMI. Additionally attach disks, network interfaces and set ip addresses.
 
 ## Repository Contents
 
