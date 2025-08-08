@@ -40,7 +40,7 @@ The config.sh file defines:
 
 ## How use?
 
-Switch
+#### Switch
 ```
 ./create-vm.sh \
   --type switch \
@@ -49,7 +49,7 @@ Switch
   --ip 10.100.200.101 \
   --bridges ge000,ge001,ge002,ge003
 ```
-Router
+##### Router
 ```
 ./create-vm.sh \
   --type router \
@@ -61,9 +61,8 @@ Router
 Other options:
 --memory <MB>, --cores <count>, --storage <storage_id> – override defaults from config.sh
 
-
-STILL IN PROGRESS
-Switch
+### STILL IN PROGRESS
+#### Switch
 ```
 ./create-vm-no-cert.sh \
   --type switch \
@@ -76,7 +75,7 @@ Switch
   --ge002-ip 192.168.30.175 \
   --ge003-ip 192.168.1.175
 ```
-Router
+#### Router
 ```
 ./create-vm.sh \
   --type router \
