@@ -10,3 +10,12 @@
 | `create-vjunos.sh` | Main provisioning script – loads defaults, validates arguments, generates `juniper.conf`, builds and attaches the config drive, creates and starts the VM. |
 | `make-config.sh` | Juniper utility script to create a **config drive** from `juniper.conf` (VFAT format, `vmm-config.tgz`). |
 | `vm-bridge-update.sh` | Post-boot script to set MTU and adjust Linux bridge forwarding masks for VM interfaces. |
+
+## Configuration (config.sh)
+The config.sh file defines:
+- Proxmox/Network: VMSTORAGE, MANAGEMENT_BRIDGE, GATEWAY, DNS_SERVER.
+- VM defaults: MEMORY, CORES, IP_SUBNET.
+- vJunos images: SWITCH_QCOW2_PATH, ROUTER_QCOW2_PATH.
+- Root login: ROOT_LOGIN_ALLOW, ROOT_PASSWORD_HASH or ROOT_PASSWORD_PLAINTEXT.
+- SNMP: enable/disable, v2c and v3 settings.
+- gRPC/gNMI: enable/disable, port, username and password.
