@@ -19,3 +19,17 @@ The config.sh file defines:
 - Root login: ROOT_LOGIN_ALLOW, ROOT_PASSWORD_HASH or ROOT_PASSWORD_PLAINTEXT.
 - SNMP: enable/disable, v2c and v3 settings.
 - gRPC/gNMI: enable/disable, port, username and password.
+
+## How create-vm.sh works
+1. Loads config.sh and parses CLI arguments.
+2. Validates IP addresses, VMID availability, bridge existence, and required files.
+3. Prepares passwords (uses hash or generates hash from plaintext).
+4. Builds juniper.conf including:
+  - hostname, root authentication, SSH and optional gRPC services,
+  - management IP (fxp0) and optional data interface IPs,
+  - default route in mgmt_junos,
+  - LLDP and optional SNMP config.
+5. Creates myconfig.img (config drive) using make-config.sh.
+6. Creates the VM in Proxmox, imports the .qcow2 OS disk, attaches the config drive.
+7. Starts the VM and runs vm-bridge-update.sh.
+8. Cleans up temporary files.
